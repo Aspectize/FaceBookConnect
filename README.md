@@ -22,8 +22,9 @@ app.Directories = "FaceBookConnect";
 
 b/ Add a new Configured service.
 In your Visual Studio Project, find the file Service.js in the Configuration/Services folder.
-Add a new service definition, filed with your own API Key and Secret provided by your FB App.
+Add a new service definition,  filed with your own API Key and Secret provided by your FB App.
 DataService is any DataBaseService used by the extention to store data.
+AutoLogin is a bool parameter, indicating if user should be automatically authenticated in your App, if the user has a valid account and is authenticated in FaceBook.
 
 ```javascript
 var fbConnectService = Aspectize.ConfigureNewService('MyFBConnectService', aas.ConfigurableServices.FacebookConnect);
