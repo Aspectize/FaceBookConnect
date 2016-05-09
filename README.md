@@ -34,4 +34,13 @@ fbConnectService.OAuthClientApplictionApiSecret = "XXXX";
 
 ##3 - Implementation
 
-In your Authenticate command
+a/ Initialize Service
+in your main.js file, add the following line:
+
+```javascript
+Aspectize.Host.ExecuteCommand('FacebookConnectJS.Init', 'MyFBConnectService');
+```
+
+This allows the FacebookConnectJS service to get your Configured Service Name.
+
+b/ In your Authenticate command
