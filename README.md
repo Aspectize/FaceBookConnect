@@ -31,7 +31,13 @@ var fbConnectService = Aspectize.ConfigureNewService('MyFBConnectService', aas.C
 fbConnectService.DataBaseServiceName = "DataService";
 fbConnectService.OAuthClientApplictionApiKey = "XXXX";
 fbConnectService.OAuthClientApplictionApiSecret = "XXXX";
+fbConnectService.Autologin = true;
 ```
+
+c/ Configure Facebook app with OAuth url
+
+Your OAuth Url is the following:
+http://<HostRootUrl>/<ApplicationName>/<FBConnectServiceName>.Oauth.json.cmd.ashx
 
 ##3 - Implementation
 
@@ -45,3 +51,6 @@ Aspectize.Host.ExecuteCommand('FacebookConnectJS.Init', 'MyFBConnectService');
 This allows the FacebookConnectJS service to get your Configured Service Name.
 
 b/ In your Authenticate command
+
+The userName parameter ends with @facebook
+
